@@ -3,16 +3,22 @@ import Layout from "../layouts/Layout.astro";
 import BackgroundFirstSection from "../components/BackgroundFirstSection.astro";
 import '../../app/globals.css';
 import { Image } from 'astro:assets';
+import CardTextOnly from "../components/CardTextOnly.astro";
+
+
+const currentYear = new Date().getFullYear();
+const experience = currentYear - 2021;
 ---
 <Layout title="Elvis Miranda Portfolio">
   <main style={{
     height: 'calc(100vh - 72px)',
   }} class="h-full flex flex-col">
-    <div class="absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
-      <BackgroundFirstSection slot="background" />
-    </div>
 
-    <div class="mt-4 flex flex-col justify-between h-full flex-1">
+
+    <div class="mt-4 flex flex-col justify-between h-full flex-1 relative">
+      <div class="absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
+        <BackgroundFirstSection  />
+      </div>
       <div class="flex justify-between">
         <p class="text-3xl dark:text-cyan-900 text-gray-300  font-bold transform -translate-x-10">Frontend</p>
         <p class="text-3xl dark:text-cyan-900 text-gray-300 font-bold translate-x-10">Backend</p>
@@ -24,8 +30,20 @@ import { Image } from 'astro:assets';
         <Image style='height: 400px' alt="Elvis Miranda" class="rounded-full object-cover transparentMainImage" src="/main-picture.JPG" width="400" height="400"/>
       </div>
       </div>
-      <div>
-        <p>hola</p>
+      <div class="pb-10 flex items-center justify-between">
+        <CardTextOnly>
+          <p class="text-gray-500"><span class="dark:text-teal-500">+{experience} Years</span> of experience</p>
+          <p class="text-gray-500">As a Software Developer</p>
+        </CardTextOnly>
+        <CardTextOnly>
+          <p class="text-gray-500"><span class="dark:text-teal-500">Experience</span> working in</p>
+          <p class="text-gray-500"><span class="dark:text-teal-500">diversity</span> types of projects </p>
+          <p class="text-gray-500">in <span class="dark:text-teal-500">multicultural</span> teams and companies</p>
+        </CardTextOnly>
+        <CardTextOnly>
+          <p class="text-gray-500"><span class="dark:text-teal-500">+{experience} Years</span> of experience</p>
+          <p class="text-gray-500">As a Software Developer</p>
+        </CardTextOnly>
       </div>
     </div>
   </main>
