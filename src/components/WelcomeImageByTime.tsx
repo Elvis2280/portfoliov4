@@ -1,9 +1,7 @@
 
-import MorningAnimation from "../lotties/morning-animation.json";
-import AfternoonAnimation from "../lotties/sunrise-animation.json";
-import NightAnimation from "../lotties/night-animation.json";
 import { useLottie } from "lottie-react";
 import {useEffect, useState} from "react";
+import {greetingsByTime} from "@/utils/constants.ts";
 
 type TimeSection = 'morning' | 'afternoon' | 'night';
 
@@ -11,7 +9,7 @@ const WelcomeImageByTime = () => {
     const [timeIllustration, setTimeIllustration] = useState<TimeSection>('morning');
 
     useEffect(() => {
-const date = new Date();
+    const date = new Date();
         const hours = date.getHours();
         if (hours >= 6 && hours < 12) {
             setTimeIllustration('morning');
@@ -23,18 +21,18 @@ const date = new Date();
     }, []);
 
     const optionsLottie = {
-        animationData: timeIllustration === 'morning' ? MorningAnimation :
-            timeIllustration === 'afternoon' ? AfternoonAnimation : NightAnimation,
+        animationData: greetingsByTime[timeIllustration].lottie,
         loop: true,
         autoplay: true,
     }
     const {View} = useLottie(optionsLottie)
+
     return (
       <div className={'flex gap-2 items-center'}>
           <div className={'h-full w-20'}>
               {View}
           </div>
-          <p>Good morning!</p>
+          <p>{greetingsByTime[timeIllustration].message}</p>
       </div>
     );
 };
