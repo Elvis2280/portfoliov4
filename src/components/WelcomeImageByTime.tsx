@@ -1,12 +1,30 @@
 
 import MorningAnimation from "../lotties/morning-animation.json";
-import {Controls, Player} from "@lottiefiles/react-lottie-player";
+import AfternoonAnimation from "../lotties/sunrise-animation.json";
+import NightAnimation from "../lotties/night-animation.json";
 import { useLottie } from "lottie-react";
+import {useEffect, useState} from "react";
 
+type TimeSection = 'morning' | 'afternoon' | 'night';
 
 const WelcomeImageByTime = () => {
+    const [timeIllustration, setTimeIllustration] = useState<TimeSection>('morning');
+
+    useEffect(() => {
+const date = new Date();
+        const hours = date.getHours();
+        if (hours >= 6 && hours < 12) {
+            setTimeIllustration('morning');
+        } else if (hours >= 12 && hours < 18) {
+            setTimeIllustration('afternoon');
+        } else {
+            setTimeIllustration('night');
+        }
+    }, []);
+
     const optionsLottie = {
-        animationData: MorningAnimation,
+        animationData: timeIllustration === 'morning' ? MorningAnimation :
+            timeIllustration === 'afternoon' ? AfternoonAnimation : NightAnimation,
         loop: true,
         autoplay: true,
     }
@@ -20,6 +38,5 @@ const WelcomeImageByTime = () => {
       </div>
     );
 };
-
 
 export default WelcomeImageByTime;
