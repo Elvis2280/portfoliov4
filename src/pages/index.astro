@@ -2,12 +2,31 @@
 import Layout from "../layouts/Layout.astro";
 import BackgroundFirstSection from "../components/BackgroundFirstSection.astro";
 import '../../app/globals.css';
+import { Image } from 'astro:assets';
 ---
 <Layout title="Elvis Miranda Portfolio">
-  <main>
+  <main style={{
+    height: 'calc(100vh - 72px)',
+  }} class="h-full flex flex-col">
     <div class="absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
       <BackgroundFirstSection slot="background" />
     </div>
-    <h1>Hello, Astro!</h1>
+
+    <div class="mt-4 flex flex-col justify-between h-full flex-1">
+      <div class="flex justify-between">
+        <p class="text-3xl dark:text-cyan-900 text-gray-300  font-bold transform -translate-x-10">Frontend</p>
+        <p class="text-3xl dark:text-cyan-900 text-gray-300 font-bold translate-x-10">Backend</p>
+      </div>
+
+      <div class="flex justify-center z-10 relative flex-1 items-center">
+      <div class="relative">
+        <div class="absolute inset-0 rounded-full"></div>
+        <Image style='height: 400px' alt="Elvis Miranda" class="rounded-full object-cover transparentMainImage" src="/main-picture.JPG" width="400" height="400"/>
+      </div>
+      </div>
+      <div>
+        <p>hola</p>
+      </div>
+    </div>
   </main>
 </Layout>
