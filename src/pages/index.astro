@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BackgroundFirstSection from "../components/BackgroundFirstSection.astro";
+import '../../app/globals.css';
 ---
 <Layout title="Elvis Miranda Portfolio">
-  <h1>Hello, Astro!</h1>
+  <main>
+    <div class="absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
+      <BackgroundFirstSection slot="background" />
+    </div>
+    <h1>Hello, Astro!</h1>
+  </main>
 </Layout>
