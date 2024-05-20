@@ -1,7 +1,5 @@
-import { Button } from "../../@/components/ui/button.tsx";
 import { useEffect, useState } from "react";
-import { IoMdSunny } from "react-icons/io";
-import { IoMdMoon } from "react-icons/io";
+import { IoMdMoon, IoMdSunny } from "react-icons/io";
 
 export const ToggleDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -16,13 +14,13 @@ export const ToggleDarkMode = () => {
   }, [isDarkMode]);
   return (
     <>
-      <Button>
+      <button className={"dark:text-teal-400 text-teal-700 text-xl"}>
         {isDarkMode ? (
           <IoMdSunny onClick={() => setIsDarkMode(!isDarkMode)} />
         ) : (
           <IoMdMoon onClick={() => setIsDarkMode(!isDarkMode)} />
         )}
-      </Button>
+      </button>
     </>
   );
 };
