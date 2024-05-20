@@ -29,5 +29,12 @@
     "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.9.0",
+    "eslint": "^9.3.0",
+    "eslint-plugin-astro": "^1.2.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
   }
 }

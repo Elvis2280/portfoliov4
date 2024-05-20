@@ -68,39 +68,38 @@ module.exports = {
           "33.33%": {
             transform: "translate(40px, -50px) scale(1.1)",
           },
-            "66.66%": {
-                transform: "translate(20px, -30px) scale(1.2)",
-            },
-            "100%": {
+          "66.66%": {
+            transform: "translate(20px, -30px) scale(1.2)",
+          },
+          "100%": {
             transform: "translate(0px, 0px) scale(1)",
-          }
+          },
         },
         navbarBar: {
           "0%": {
             height: "100%",
           },
           "33.33%": {
-            height: '50%'
+            height: "50%",
           },
           "50%": {
-            height: '75%'
+            height: "75%",
           },
           "60%": {
-            height: '50%'
+            height: "50%",
           },
           "100%": {
-            height: '100%'
-          }
-        }
+            height: "100%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         bg: "bg 7s infinite",
-        navbarBar: "navbarBar 2s ease-in-out"
+        navbarBar: "navbarBar 2s ease-in-out",
       },
-
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
