@@ -4,6 +4,7 @@ import BackgroundFirstSection from "../components/BackgroundFirstSection.astro";
 import '../../app/globals.css';
 import { Image } from 'astro:assets';
 import CardTextOnly from "../components/CardTextOnly.astro";
+import MainImageTechStackIcons from "../components/MainImageTechStackIcons.astro";
 
 
 const currentYear = new Date().getFullYear();
@@ -14,11 +15,14 @@ const experience = currentYear - 2021;
     height: 'calc(100vh - 72px)',
   }} class="h-full flex flex-col">
 
-
     <div class="mt-4 flex flex-col justify-between h-full flex-1 relative">
-      <div class="absolute top-2/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
+      <div class="absolute top-1/4 left-2/4 transform -translate-y-2/4 -translate-x-2/4">
         <BackgroundFirstSection  />
       </div>
+      <div class="absolute top-2/4 left-2/4">
+        <MainImageTechStackIcons  />
+      </div>
+
       <div class="flex justify-between">
         <p class="text-3xl dark:text-cyan-900 text-gray-300  font-bold transform -translate-x-10">Frontend</p>
         <p class="text-3xl dark:text-cyan-900 text-gray-300 font-bold translate-x-10">Backend</p>
