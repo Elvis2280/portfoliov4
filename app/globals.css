@@ -11,3 +11,53 @@
   object-fit: cover;
   border-radius: 50%;
 }
+
+.imageProfileBox:before{
+  content: "";
+  position: absolute;
+  width: 101%;
+    height: 101%;
+  background: linear-gradient(white, transparent, transparent);
+  top: 50%;
+    left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+    animation: loadCircleBorder 7s ease-in-out;
+    animation-delay: 1.5s;
+}
+.imageProfileBox:after{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 150px;
+  top: 0;
+    left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(white, transparent, transparent);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  animation: loadStick 4s ease-in;
+  animation-delay: 1.5s;
+}
+
+@keyframes loadStick {
+    0% {
+        height: 0;
+    }
+    50% {
+        height: 75px;
+    }
+    100% {
+        height: 150px;
+    }
+}
+
+@keyframes loadCircleBorder {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+
+}

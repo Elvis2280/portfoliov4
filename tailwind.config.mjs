@@ -197,6 +197,17 @@ module.exports = {
             opacity: 1,
           },
         },
+        iconPulse: {
+            "0%": {
+                transform: "scale(1)",
+            },
+            "50%": {
+                transform: "scale(1.1)",
+            },
+            "100%": {
+                transform: "scale(1)",
+            },
+        }
       },
 
       animation: {
@@ -216,6 +227,7 @@ module.exports = {
         pythonIcon: "pythonIcon 2.4s ease-in-out",
         dockerIcon: "dockerIcon 2.2s ease-in-out",
         dotNetIcon: "dotNetIcon 2.6s ease-in-out",
+        iconPulse: "iconPulse 2s infinite",
       },
       animationDelay: {
         '2': '2s',
