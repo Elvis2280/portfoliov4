@@ -15,8 +15,8 @@
 .imageProfileBox:before{
   content: "";
   position: absolute;
-  width: 101%;
-    height: 101%;
+  width: 102%;
+    height: 102%;
   background: linear-gradient(white, transparent, transparent);
   top: 50%;
     left: 50%;
@@ -54,10 +54,14 @@
 
 @keyframes loadCircleBorder {
     0% {
+        height: 0;
         width: 0;
+        top: 0;
     }
     100% {
-        width: 100%;
+        height: 102%;
+        width: 102%;
+        top: 50%;
     }
 
 }
