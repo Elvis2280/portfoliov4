@@ -22,7 +22,7 @@
     left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 100%;
-    animation: loadCircleBorder 7s ease-in-out;
+    animation: loadCircleBorder 5s ease-in-out;
     animation-delay: 1.5s;
 }
 .imageProfileBox:after{
