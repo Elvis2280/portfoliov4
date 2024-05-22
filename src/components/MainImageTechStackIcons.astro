@@ -1,26 +1,53 @@
 ---
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiAstro } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { AiOutlineJavaScript } from "react-icons/ai";
+import { FaReact, FaNodeJs, FaPython } from "react-icons/fa";
+import { AiOutlineJavaScript, AiOutlinePython, AiOutlineDotNet } from "react-icons/ai";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { FaGolang, FaDocker } from "react-icons/fa6";
+
 ---
 
 
 <div class="relative">
-    <div class="bg-slate-800 p-3 rounded inline-block text-3xl absolute -translate-x-24 -translate-y-14">
+    <!--Frontend Section start-->
+    <div style="transform: translate(-288px, -80px)" class="bg-slate-800 p-3 rounded inline-block text-3xl absolute -translate-x-72
+     -translate-y-20 animate-nextIcon delay-1000">
         <TbBrandNextjs  />
     </div>
-    <div class="bg-slate-800 p-3 rounded inline-block text-3xl absolute -translate-x-24 -translate-y-14">
+    <div style="transform: translate(-256px, -176px)" class="bg-slate-800 p-3 rounded inline-block text-3xl absolute animate-astroIcon delay-1000">
         <SiAstro  />
     </div>
-    <div class="bg-slate-800 p-3 rounded inline-block text-3xl absolute -translate-x-24 -translate-y-14">
+    <div style="transform: translate(-208px, -256px)" class="bg-slate-800 p-3 rounded inline-block
+     text-3xl absolute -translate-x-52 -translate-y-64 animate-reactIcon delay-1000">
         <FaReact  />
     </div>
-    <div class="bg-slate-800 p-3 rounded inline-block text-3xl absolute -translate-x-24 -translate-y-14">
+    <div style="transform: translate(-320px, -240px)" class="bg-slate-800 p-3 rounded inline-block text-3xl absolute animate-jsIcon delay-1000">
         <AiOutlineJavaScript  />
     </div>
-    <div class="bg-slate-800 p-3 rounded inline-block text-3xl absolute -translate-x-24 -translate-y-14">
+    <div style="transform: translate(-365px, -135px)" class="bg-slate-800 p-3 rounded
+    inline-block text-3xl absolute animate-tailwindIcon delay-1000">
         <RiTailwindCssFill  />
     </div>
+    <!--Frontend Section end-->
+    <!--Backend Section start-->
+    <div style="transform: translate(238px, -80px)" class="bg-slate-800 p-3 rounded inline-block text-3xl
+     absolute -translate-x-72 -translate-y-20 animate-pythonIcon delay-1000">
+        <AiOutlinePython  />
+    </div>
+    <div style="transform: translate(206px, -176px)" class="bg-slate-800 p-3 rounded inline-block text-3xl absolute animate-goIcon delay-1000">
+        <FaGolang  />
+    </div>
+    <div style="transform: translate(158px, -256px)" class="bg-slate-800 p-3 rounded inline-block
+     text-3xl absolute -translate-x-52 -translate-y-64 animate-nodeIcon delay-1000">
+        <FaNodeJs  />
+    </div>
+    <div style="transform: translate(270px, -240px)" class="bg-slate-800 p-3 rounded inline-block text-3xl absolute animate-dockerIcon delay-1000">
+        <FaDocker  />
+    </div>
+    <div style="transform: translate(315px, -135px)" class="bg-slate-800 p-3 rounded
+    inline-block text-3xl absolute animate-dotNetIcon delay-1000">
+        <AiOutlineDotNet  />
+    </div>
+    <!--Backend Section end-->
 </div>
